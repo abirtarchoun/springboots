@@ -1,0 +1,149 @@
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-3">
+            <div class="site-logo" style="width:600px;">
+              <a routerLink="/">CarRent</a>
+            </div>
+          </div>
+
+          <div class="col-9  text-right">
+            <span class="d-inline-block d-lg-none"><a href="#"
+                class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+            <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                <li class="active"> <a routerLink="/home" class="nav-link" (click)="reloadPage()">Home</a></li>
+                <li><a routerLink="/services" class="nav-link" (click)="reloadPage()">Services</a></li>
+                <li><a routerLink="/cars-rent" class="nav-link" (click)="reloadPage()">Rent</a></li>
+                <li><a routerLink="/voiture_vendre" class="nav-link" (click)="reloadPage()">Buy</a></li>
+                <li><a routerLink="/about" class="nav-link" (click)="reloadPage()">About</a></li>
+                <li><a routerLink="/teams" class="nav-link"(click)="reloadPage()">Agent</a></li>
+                <li><a routerLink="/blogs" class="nav-link"(click)="reloadPage()">Blog</a></li>
+                <li><a routerLink="/feedback" class="nav-link"(click)="reloadPage()">Feedback</a></li>
+                <li><a routerLink="/contact" class="nav-link"(click)="reloadPage()">Contact</a></li>
+                <li><a routerLink="/favorites" class="nav-link"(click)="reloadPage()">Favorites</a></li>
+                <li><a *ngIf="!currentUser.name " routerLink="/auth/login" class="nav-link"(click)="reloadPage()">Login</a></li>
+                
+                    
+                 <!-- <div *ngIf="currentUser.name "><li>
+                  <div  (click)="logout()"><i class="bi bi-box-arrow-left"></i> Logout</div>
+                </li></div>       -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+<nav class="main-men" *ngIf="currentUser.name "> 
+  <ul>
+    <li>
+      <a href="#">
+        <i class="fa fa-user fa-2x"></i>
+        <span class="nav-text">
+          {{currentUser.name}}
+        </span>
+        <div  (click)="logout()">
+          <i class="fa fa-power-off fa-2x"></i>
+         <span class="nav-text">
+         </span></div>
+    </a>
+    <a class="nav-link  " href="#" aria-expanded="false"></a></li>
+      <li>
+          <a routerLink="/">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">
+                  Dashboard
+              </span>
+          </a>
+        
+      </li>
+      <li class="has-subnav">
+          <a routerLink="/team">
+              <i class="fa fa-laptop fa-2x"></i>
+              <span class="nav-text">
+                  Teams
+              </span>
+          </a>
+          
+      </li>
+      <li>
+          <a  routerLink="/agencyAdmin">
+             <i class="fa fa-users fa-2x"></i>
+              <span class="nav-text">
+                  Agency Admin
+              </span>
+          </a>
+          
+      </li>
+      <li >
+          <a routerLink="/rent-add">
+             <i class="fa fa-folder-open fa-2x"></i>
+              <span class="nav-text">
+                  Cars for rent
+              </span>
+          </a>
+         
+      </li>
+      <li>
+          <a routerLink="/cars">
+              <i class="fa fa-bar-chart-o fa-2x"></i>
+              <span class="nav-text">
+                  Cars for sales
+              </span>
+          </a>
+      </li>
+      <li>
+          <a routerLink="/rdv-admin">
+              <i class="fa fa-list fa-2x"></i>
+              <span class="nav-text">
+                 RDV-admin
+              </span>
+          </a>
+      </li>
+      <li>
+      <a routerLink="/rdv-buy">
+        <i class="fa fa-list fa-2x"></i>
+        <span class="nav-text">
+           RDV-Buy
+        </span>
+    </a>
+</li>
+      <li>
+         <a routerLink="#">
+             <i class="fa fa-cogs fa-2x"></i>
+              <span class="nav-text">
+                  Parametre
+              </span>
+          </a>
+      </li>
+      <li>
+         <a routerLink="/streetmap">
+              <i class="fa fa-map-marker fa-2x"></i>
+              <span class="nav-text">
+                  Street Map
+              </span>
+          </a>
+      </li>
+      <li>
+        <a routerLink="#">
+             <i class="fa fa-bell fa-2x"></i>
+              <span class="nav-text">
+                  Notification
+              </span>
+         </a> 
+      </li>
+  </ul>
+
+  <!-- <ul >
+      <li>
+        <div  (click)="logout()">
+               <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">
+                 Logout
+              </span></div>
+      </li>  
+  </ul> -->
+</nav>

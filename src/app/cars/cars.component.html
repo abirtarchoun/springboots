@@ -1,0 +1,111 @@
+
+
+	  <!-- backtotop - start -->
+		<div id="thetop"></div>
+		<div class="backtotop">
+			<a href="/cars" class="scroll">
+				<i class="fa fa-arrow-up"></i>
+			</a>
+		</div>
+		<!-- backtotop - end -->   
+<div class="container">
+  <br><br><br><br><br><br>
+  <div class="search-div">
+    <mat-form-field class="search-form-field" floatLabel="never">
+      <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  
+  <!--******************************************* ladd  cars *****************************************************--->
+  <form [formGroup]="httpDataService.form" class="normal-form" (submit)="onSubmit()" >
+    <input type="hidden" formControlName="_id">
+  
+    <mat-form-field>
+      <input formControlName="title" matInput placeholder="Title">
+      <mat-error *ngIf="httpDataService.form.controls['title'].errors?.required">this field is mandatory.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field style="margin-left: 30px;">
+      <input formControlName="description" matInput placeholder="description">
+      <mat-error *ngIf="httpDataService.form.controls['description'].errors?.required">this field is mandatory.</mat-error>
+      <mat-error *ngIf="httpDataService.form.controls['image'].errors?.minlength">Minimum 8 charactors needed.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field style="margin-left: 30px;">
+      <input formControlName="image" matInput placeholder="image">
+      <mat-error *ngIf="httpDataService.form.controls['image'].errors?.required">This field is mandatory.</mat-error>
+      <mat-error *ngIf="httpDataService.form.controls['image'].errors?.minlength">Minimum 8 charactors needed.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field style="margin-left: 30px;">
+      <input formControlName="Kilometrage" matInput placeholder="Kilometrage">
+      <mat-error>this field is mandatory.</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field style="margin-left: 30px;">
+      <input formControlName="price" matInput placeholder="Price">
+      <mat-error>this field is mandatory</mat-error>
+    </mat-form-field>
+      <button *ngIf="!isEditeMode" mat-raised-button color="primary"  type="submit" style="margin-left: 30px;" [disabled]="httpDataService.form.invalid">
+        add</button>&nbsp;
+        <button *ngIf="isEditeMode" mat-raised-button color="primary" (click)="updatee()" type="submit" style="margin-left: 30px;">
+          Edit</button>&nbsp;
+      <button mat-raised-button color="warn" (click)="onClear()">Clear</button>&nbsp;
+  
+  </form>
+  <!--******************************************* list cars *****************************************************--->
+  <mat-spinner style="margin-left: 560px; width:100px;" *ngIf="showspinner" color="primary"></mat-spinner>
+  <div class="mat-elevation-z8 " *ngIf ="!showspinner">
+    <mat-table [dataSource]="datasource" matSort >
+    <!--<ng-container matColumnDef="_id"  >
+        <mat-header-cell *matHeaderCellDef mat-sort-header> #id </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element._id}} </mat-cell>
+      </ng-container>-->
+      <ng-container matColumnDef="title"  >
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.title}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-Left:35px;">Description </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-Left:40px;"> {{element.description}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="image">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-Left:55px;"> Image </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-Left:45px;"> <img  class="images" src={{element.image}}/> </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Kilometrage">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-Left:55px;"> Kilometrage </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-Left:120px;">{{element.Kilometrage}}</mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-Left:120px;"> Price</mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-Left:100px;">{{element.price}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="onEdit(row)">
+            <mat-icon>edit_outline</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(row.id)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="loading">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          Loading data...
+        </mat-footer-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+<br>

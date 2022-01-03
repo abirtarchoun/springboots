@@ -1,0 +1,54 @@
+<mat-toolbar>
+    <span>{{agencyService.form.controls['_id'].value?"Modify Agency ":"New Agency"}}</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="agencyService.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="1" rowHeight="100px">
+      <mat-grid-tile>
+        <div class="container">
+          <input type="hidden" formControlName="_id">
+          <mat-form-field >
+            <input formControlName="owner" matInput placeholder="Owner">
+            <mat-error *ngIf="agencyService.form.controls['owner'].errors?.required">this field is mandatory.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="margin-Left:30px;">
+            <input formControlName="location" matInput placeholder="Location">
+            <mat-error *ngIf="agencyService.form.controls['location'].errors?.required">this field is mandatory.</mat-error>
+          </mat-form-field>
+         <!------<mat-form-field class="example-full-width" appearance="fill" placeholder="Description">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>-->
+            
+          <mat-form-field style="margin-Left:30px;">
+            <input formControlName="description" matInput placeholder="description">
+             <mat-error *ngIf="agencyService.form.controls['description'].errors?.required">this field is mandatory.</mat-error>
+          </mat-form-field>
+          
+       <mat-form-field style="margin-Left:30px;"> 
+            <input formControlName="image" matInput placeholder="image">
+            <mat-error *ngIf="agencyService.form.controls['image'].errors?.required">This field is mandatory.</mat-error>
+          </mat-form-field> 
+           <mat-form-field style="margin-Left:30px;">                                                                                                         
+            <input formControlName="date_creation" matInput [matDatepicker]="picker" placeholder="Date Creation" style="margin-Left:30px;">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+             <mat-error *ngIf="agencyService.form.controls['date_creation'].errors?.required">Invalid hire date.</mat-error>
+          </mat-form-field>
+     </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        
+        <div class="controles-container">
+         
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="agencyService.form.invalid">Save</button>
+            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+          </div>
+        </div>
+       </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+  

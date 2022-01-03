@@ -1,0 +1,64 @@
+<!-- backtotop - start -->
+<div id="thetop"></div>
+<div class="backtotop">
+  <a href="#" class="scroll">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+</div>
+<!-- backtotop - end -->
+
+<!-- preloader - start -->
+<div class="preloader">
+  <div class="animation_preloader">
+    <div class="spinner"></div>
+    <p class="text-center">Loading</p>
+  </div>
+  <div class="loader">
+    <div class="row vh-100">
+      <div class="col-3 loader_section section-left">
+        <div class="bg"></div>
+      </div>
+      <div class="col-3 loader_section section-left">
+        <div class="bg"></div>
+      </div>
+      <div class="col-3 loader_section section-right">
+        <div class="bg"></div>
+      </div>
+      <div class="col-3 loader_section section-right">
+        <div class="bg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- preloader - end -->
+<div class="ftco-blocks-cover-1">
+  <div class="ftco-cover-1 overlay innerpage" style="background-image: url('assets/images/plan5.jpg')">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h1>About Us</h1>
+          <h3 align="center" style="color:rgb(247, 247, 247)">Impression Make Customers </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<section class="breadcrumb_section text-center clearfix">
+  <div class="overlay"></div>
+  <div class="page_title_area has_overlay d-flex align-items-center clearfix">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 mb-5 mb-lg-0" *ngFor="let Agency of agencyList">
+        <div class="row">
+          <img [src]="Agency.image" alt="Image" class="img-fluid">&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="container" align="center" style="margin-left: 700px; margin-top: -300px;">
+            <h2 class="mb-4">Welcome To RentalCar Agency in<a href="#"> {{Agency.location}} </a>&nbsp;</h2>&nbsp;
+            <p>{{Agency.description}}</p>
+            <button routerLink="/about/{{Agency.id}}" class="btn btn-outline-primary">More details </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

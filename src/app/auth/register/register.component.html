@@ -1,0 +1,62 @@
+
+<div class="ftco-blocks-cover-1">
+  <div class="ftco-cover-1 overlay innerpage" style="background-image: url('assets/images/t3.jpg')">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h1>WELCOME</h1>
+          <h3 align="center" style="color:rgb(247, 247, 247)">Let's Start With a authentification !</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="breadcrumb_section text-center clearfix">
+  <div class="overlay"></div>
+  <div class="page_title_area has_overlay d-flex align-items-center clearfix">
+    <div class="container " data-aos="fade-up" data-aos-delay="100">
+      <div class="row">
+        <div class="site-section bg-light">
+          <div class="container">
+            <div class="row justify-content-center text-center mb-5 section-2-title">
+              <div class="col-md-6">
+                <span class="text-primary">WELCOME OUR RENTALCAR AGENCY</span><br><br>
+                <h2 class="mb-4">Please Sign Up</h2>
+                <div class="container">
+                  <main class="form-signin" style="margin-top: 100px;">
+                    <form [formGroup]="registerForm" (ngSubmit)="signupUser()">
+                      <div class="form-floating">
+                        <input type="text" formControlName="name" class="form-control" id="floatingName"
+                          placeholder="Name" required>
+                        <label for="floatingName">Name</label>
+                      </div>
+                      <div class="form-floating" style="margin-top: 15px;">
+                        <input type="email" formControlName="email" class="form-control" id="floatingInput"
+                          placeholder="name@example.com" required>
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating" style="margin-top: 15px;">
+                        <input type="password" formControlName="password" class="form-control" id="floatingPassword"
+                          placeholder="Password" required>
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                      <div class="form-floating" style="margin-top: 15px;">
+                        <input type="password" formControlName="confirm_password" class="form-control" required
+                          id="floatingConfirmPassword" placeholder="Confirm password">
+                        <label for="floatingConfirmPassword" >Confirm password</label>
+                      </div>
+                      <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit"
+                        style="margin-top: 15px;">Sign up</button>
+                      <p class="mt-5 mb-3">Already have an account? <a routerLink="/auth/login">Login here!</a></p>
+                      <p class="mt-5 mb-3 text-muted">&copy; RENTALCAR - 2021</p>
+                    </form>
+                  </main>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

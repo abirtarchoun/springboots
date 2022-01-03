@@ -1,0 +1,148 @@
+
+	  <!-- backtotop - start -->
+		<div id="thetop"></div>
+		<div class="backtotop">
+			<a href="/cars-rent" class="scroll">
+				<i class="fa fa-arrow-up"></i>
+			</a>
+		</div>
+		<!-- backtotop - end -->                  
+   
+     <!-- preloader - start -->
+  <div class="preloader">
+    <div class="animation_preloader">
+      <div class="spinner"></div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row vh-100">
+        <div class="col-3 loader_section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader_section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader_section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader_section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- preloader - end -->
+
+<div class="ftco-blocks-cover-1" >
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('assets/images/plan17.jpg')">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h1>Our For Rent Cars</h1>
+            <h3 align="center"  style="color:rgb(223, 223, 223)">Find Your Own Raod A Car For Everyone</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="breadcrumb_section text-center clearfix" >
+    <div class="overlay"></div>
+    <div class="page_title_area has_overlay d-flex align-items-center clearfix">
+      <div class="container " data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5 section-2-title">
+          <div class="col-md-6">
+            <span class="text-primary">Our Cars</span>
+            <h2 class="mb-4">Our Cars For Rent </h2>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let voiture of voituresList" >
+            <div class="item-1">
+                <a href="#"><img [src]="voiture.image" alt="Image" class="img-fluid"></a>
+                <div class="item-1-contents">
+                  <div class="text-center">
+                  <h3><a href="#">{{ voiture.title }}</a></h3>
+                  <div class="rating">
+                    <span class="icon-star text-warning"></span>
+                    <span class="icon-star text-warning"></span>
+                    <span class="icon-star text-warning"></span>
+                    <span class="icon-star text-warning"></span>
+                    <span class="icon-star text-warning"></span>
+                  </div>
+                  <div class="rent-price"><span>{{ voiture.price|currency:'TND' }}/</span>day</div>
+                  </div>
+                  <ul class="specs">
+                    <li>
+                      <span class="spec">{{ voiture.description|slice:0:70 }} </span>
+                    </li>
+
+                  </ul>
+                  <br><br>
+                  <div class="d-flex action">
+                    <button routerLink="/cars-rent/{{ voiture.id }}" class="btn btn-outline-primary">Details</button>&nbsp; &nbsp;
+                     <button type="button" (click)="addTofav(voiture.id)" title="Add To Fav"  id ="heart" class="btn btn-sm btn-outline-secondary"><i id="like"  ></i>Add to favorites</button>&nbsp;
+                     <button class="btn btn-sm btn-outline-primary" (click)="onEditRent(voiture)" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Rent Now</button>&nbsp;
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <section>
+        <br><br><br>
+	<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Rent a Car
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue"(ngSubmit)="addRent()" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nom de la Voiture</label>
+            <input type="text"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              formControlName="Nom_Voiture" readonly />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="Nom_utilisateur"
+              aria-describedby="emailHelp" />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email"
+              aria-describedby="emailHelp" />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date début</label>
+            <input type="date" accept="image/png, image/jpeg" class="form-control" id="exampleInputEmail1" name="image"
+              formControlName="Date_debut" aria-describedby="emailHelp" />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date fin</label>
+            <input type="date" class="form-control" id="exampleInputEmail1" formControlName="Date_fin"
+              aria-describedby="emailHelp" />
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit" (click)="reloadPage()">
+             add
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
+     

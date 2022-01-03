@@ -1,0 +1,68 @@
+<!-- backtotop - start -->
+<div id="thetop"></div>
+<div class="backtotop">
+  <a href="/team" class="scroll">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+</div>
+<!-- backtotop - end -->
+<div class="container">
+<div class="search-div">
+ <button mat-fab color="gray" (click)="onCreate()">
+   <mat-icon >add</mat-icon>
+ </button>
+ <mat-form-field class="search-form-field" floatLabel="never">
+   <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+   <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey"  (click)="onSearchClear()">
+     <mat-icon>close</mat-icon>
+   </button>
+ </mat-form-field>
+</div>
+  <mat-spinner style="margin-left: 560px; width:100px;" *ngIf="showspinner" color="primary"></mat-spinner>
+  <div class="mat-elevation-z8 " *ngIf ="!showspinner">
+    <mat-table [dataSource]="datasource" matSort >
+      <ng-container matColumnDef="name"  >
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 30px;"> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.name}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="mail">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 30px;">Email </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.mail}} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 30px;"> Phone </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="city">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 30px;"> City </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-left: 50px;">{{element.city}}</mat-cell>
+      </ng-container>
+     <!--- <ng-container matColumnDef="image">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-Left:55px;"> Image </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="margin-Left:45px;"> <img  class="images" src={{element.image}}/> </mat-cell>
+      </ng-container>----->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="onEdit(row)">
+            <mat-icon>edit_outline</mat-icon>
+          </button>&nbsp;&nbsp;
+          <button mat-icon-button color="warn" (click)="onDelete(row.id)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="loading">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          Loading data...
+        </mat-footer-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+<br>

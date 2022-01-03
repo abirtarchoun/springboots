@@ -1,0 +1,381 @@
+{"Teams": [
+    {
+      "id": "1",
+      "name": "AbirTarchoun",
+      "mail": "abirtarchoun@gmail.com",
+      "phone": "21628097322",
+      "image": "assets/images/abir.jpg",
+      "city": "bizerte"
+    },
+    {
+      "id": "2",
+      "name": "Wassim Hachani",
+      "mail": "WassimHachani@gmail.com",
+      "phone": "21612345678",
+      "image": "assets/images/wassim.jpg",
+      "city": "bizerte"
+    },
+    {
+      "id": "3",
+      "name": "NourTrigui",
+      "mail": "NourTrigui@gmail.com",
+      "phone": "21678563412",
+      "image": "assets/images/nour.jpg",
+      "city": "tunis"
+    },
+    {
+      "id": "4",
+      "name": "RayenNafouti",
+      "mail": "rayennafouti@gmail.com",
+      "phone": "21621436587",
+      "image": "assets/images/rayen.jpg",
+      "city": "tunis"
+    }
+  ],
+  "Agency": [
+    {
+      "id": "1",
+      "owner": "abir",
+      "description": "As consumers, we often take for granted all the hard work that goes into building a great company. We see them around but we dont know what goes on behind the scenes.Finally, we can read about how these great companies came about with Company Histories.",
+      "image": "assets/images/v1.jpg",
+      "location": "Bizerte",
+      "datecreation": "5/5/2019"
+    },
+    {
+      "id": "2",
+      "owner": "wassim",
+      "description": "As consumers, we often take for granted all the hard work that goes into building a great company. We see them around but we dont know what goes on behind the scenes.Finally, we can read about how these great companies came about with Company Histories.",
+      "image": "assets/images/v5.jpg",
+      "location": "Tunis",
+      "datecreation": "11/10/2017"
+    },
+    {
+      "id": "3",
+      "owner": "rayen",
+      "description": "As consumers, we often take for granted all the hard work that goes into building a great company. We see them around but we dont know what goes on behind the scenes.Finally, we can read about how these great companies came about with Company Histories.",
+      "image": "assets/images/v6.jpg",
+      "location": "Sousse",
+      "datecreation": "7/8/2018"
+    },
+    {
+      "id": "4",
+      "owner": "Nour",
+      "description": "As consumers, we often take for granted all the hard work that goes into building a great company. We see them around but we dont know what goes on behind the scenes.Finally, we can read about how these great companies came about with Company Histories.",
+      "image": "assets/images/v5.jpg",
+      "location": "Mahdia",
+      "datecreation": "11/8/2018"
+    }
+  ],
+  "Clients": [
+    {
+      "id": "1",
+      "name": "Alexandra Jae",
+      "mail": "alex.8@gmail.com",
+      "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "assets/images/person_2.jpg",
+      "city": "sousse",
+      "job": "Technicien"
+    },
+    {
+      "id": "2",
+      "name": " Same Die",
+      "mail": "same@gmail.com",
+      "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+      "image": "assets/images/person_3.jpg",
+      "city": "italie",
+      "job": "Assistance"
+    },
+    {
+      "id": "3",
+      "name": " Jihen Je",
+      "mail": "johen@gmail.com",
+      "description": "is the most helpful insurance agent I have ever dealt with. She is honest and up front with everything.This agency does a fantastic job.",
+      "image": "assets/images/person_5.jpg",
+      "city": "tunis",
+      "job": " Developper"
+    },
+    {
+      "id": "4",
+      "name": "Jame Doe",
+      "mail": "jameJoe@gmail.com",
+      "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "assets/images/person_1.jpg",
+      "city": "France",
+      "job": "Ingenieur"
+    },
+    {
+      "id": "5",
+      "name": "Hamo Di",
+      "mail": "hamo@gmail.com",
+      "description": "Great local insurance company for personal and business related insurance. Get immediate insurance proof and easy payment options.",
+      "image": "assets/images/person_1.jpg",
+      "city": "tunis",
+      "job ": " Developper Full Stack"
+    },
+    {
+      "id": "6",
+      "name": "Ahmed Ben ",
+      "mail": "ahmedBen@gmail.com",
+      "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+      "image": "assets/images/person_4.jpg",
+      "city": "France",
+      "job": "Technicien"
+    }
+  ],
+  "Rent": [
+    {
+      "id": "1",
+      "modele": "Hyundai Grand i10 Sedan",
+      "marque": "Hyundai Grand i10 Sedan",
+      "description": "La Hyundai i10 est une automobile du constructeur automobile coréen Hyundai produite depuis 2008. cest une citadine 5 portes, elle a remplacé la Hyundai Atos Prime en 2008 sur le marché européen, mais pas en Inde, où Atos Prime, appelée Santro, continue à être produite et coûte moins cher",
+      "image": "assets/images/im2.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "2",
+      "modele": "Golf 8",
+      "marque": "Golf 8",
+      "description": "La Golf VIII est une berline compacte qui est la 8e génération de Volkswagen Golf produite à plus de 35 millions exemplaires depuis 1974 par le constructeur automobile allemand Volkswagen, et commercialisée à partir de mars 2020. Elle succède à la Golf VII produite de 2012 à 2019.",
+      "image": "assets/images/im3.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "3",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image": "assets/images/im10.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "4",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image": "assets/images/im4.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "5",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image":"assets/images/im9.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "6",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image":"assets/images/im9.jpg",
+      "Kilometrage": "220 klm",
+      "puissance": "150 ch ",
+      "price": 39.99
+    }
+  ],
+   "Buy" :[
+     {
+    "id": "1",
+    "modele": "Range Rover S64 Coupe",
+    "marque": "Range Rover S64 Coupe",
+    "description":
+      "La Hyundai i10 est une automobile du constructeur automobile coréen Hyundai produite depuis 2008. cest une citadine 5 portes, elle a remplacé la Hyundai Atos Prime en 2008 sur le marché européen, mais pas en Inde, où Atos Prime, appelée Santro, continue à être produite et coûte moins cher",
+    "image":"assets/images/im2.jpg",
+     "puissance":"150 ch ",
+    "Kilometrage": "220/klm",
+   "price": 250
+  },
+    
+    {
+    "id": "2",
+    "modele": "Range Rover S64 Coupe",
+    "marque": "Range Rover S64 Coupe",
+    "description": "La Golf VIII est une berline compacte qui est la 8e génération de Volkswagen Golf produite à plus de 35 millions exemplaires depuis 1974 par le constructeur automobile allemand Volkswagen, et commercialisée à partir de mars 2020. Elle succède à la Golf VII produite de 2012 à 2019.",
+    "image":
+      "assets/images/im3.jpg",
+    "puissance":"150 ch ",
+    "Kilometrage": " 220/klm",
+    "price": 250
+  },
+  {
+    "id": "3",
+    "marque": "Range Rover ",
+    "modele": "Range Rover ",
+    "description":
+      "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+    "image":
+      "assets/images/im5.jpg",
+
+    "puissance":"150 ch ",
+    "Kilometrage": " 220/klm",
+    "price": 200000
+
+  },
+  {
+    "id": "4",
+    "marque": "Range Rover ",
+    "modele": "Range Rover ",
+    "description":
+      "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+    "image":
+      "assets/images/im1.jpg",
+
+    "puissance":"150 ch ",
+    "Kilometrage": " 220/klm",
+    "price": 200000
+  },
+  {
+    "id": "5",
+    "modele": "Range Rover",
+   "marque" :"Range Rover ",
+    "description":
+      "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+    "image": "assets/images/plan19.jpg",
+    "puissance":"150 ch ",
+    "Kilometrage": " 220/klm",
+    "price": 200000
+  },
+  {
+    "id": "6",
+    "modele": "Range Rover ",
+    "marque": "Range Rover",
+    "description":
+      "La Hyundai i10 est une automobile du constructeur automobile coréen Hyundai produite depuis 2008. cest une citadine 5 portes, elle a remplacé la Hyundai Atos Prime en 2008 sur le marché européen, mais pas en Inde, où Atos Prime, appelée Santro, continue à être produite et coûte moins cher",
+    "image":
+      "assets/images/plan21.jpg",
+    "puissance":"150 ch ",
+    "Kilometrage": "220/klm",
+    "price": 200000
+  }
+   ],
+ "Blog":[
+  {
+   "title": "WHICH LAMBORGHINI IS RIGHT FOR ME?",
+    "owner": "Admin",
+   "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+    "image": "assets/images/im8.jpg"
+  
+  },{
+  
+    "title": "REVIEW: A WEEK WITH THE 2020 PORSHE",
+    "owner": "Admin",
+    "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+    "image": "assets/images/im5.jpg"
+    
+  },{
+
+    "title": " REVIEW: A WEEK WITH THE 2020 LAMBORGHINI",
+    "owner": "Admin",
+    "description": "is the most helpful insurance agent I have ever dealt with. She is honest and up front with everything.This agency does a fantastic job.",
+    "image": "assets/images/im3.jpg"
+  
+  },{
+  
+    "title": "REVIEW: LOOKING AT THE 2020 LAMBORGHINI HIGH COUNTRY",
+   "owner": "Admin",
+    "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+    "image": "assets/images/plan5.jpg"
+ 
+  },
+  {
+  
+    "title": "OUR 5 FAVORITE CARS THAT DEBUTED IN 2021",
+    "owner": "Admin",
+    "description": "Great local insurance company for personal and business related insurance. Get immediate insurance proof and easy payment options.",
+    "image": "assets/images/im2.jpg"
+ 
+  },{
+    
+    "title": "REVIEW: A WEEK WITH THE 2020 LAMBORGHINI",
+    "owner": "Admin",
+    "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+    "image": "assets/images/im10.jpg"
+
+    
+  }
+],
+
+"rentrdv":[
+  {
+      
+      "Nom_Voiture": "Hyundai Grand i10 Sedan",
+      "Nom_utilisateur": "Hachani Mohamed Wassim",
+      "email":"wassimhach16@gmail.com",
+      "Date_debut ": "29/12/2021",
+      "Date_fin": "04/01/2022"
+    },{
+     
+      "Nom_Voiture": "Golf 8'",
+      "Nom_utilisateur": "Tarchoun Abir",
+      "email":"wassimhach16@gmail.com",
+      "Date_debut": "05/01/2022",
+      "Date_fin": "10/01/2022"
+    },{
+      
+      "Nom_Voiture": "Polo 7",
+      "Nom_utilisateur": "Nafouti Rayen",
+      "email":"wassimhach16@gmail.com",
+      "Date_debut": "11/01/2022",
+      "Date_fin":"22/01/2022" 
+    }
+],
+"buyredv":[
+  {
+      
+      "Nom_Voiture": "Hyundai Grand i10 Sedan",
+      "Nom_utilisateur": "Hachani Mohamed Wassim",
+      "email":"wassimhach16@gmail.com",
+      "Date_rdv ": "29/12/2021",
+      "localisation": "Bizerte"
+    },{
+     
+      "Nom_Voiture": "Golf 8'",
+      "Nom_utilisateur": "Tarchoun Abir",
+      "email":"wassimhach16@gmail.com",
+      "Date_rdv": "05/01/2022",
+      "localisation": "Bizerte"
+    },{
+      
+      "Nom_Voiture": "Polo 7",
+      "Nom_utilisateur": "Nafouti Rayen",
+      "email":"wassimhach16@gmail.com",
+      "Date_rdv": "11/01/2022",
+      "localisation":"Tunis" 
+    }
+],
+"users": [
+  {
+    "id": "1",
+    "name": "AbirTarchoun",
+    "email": "abirtarchoun@gmail.com",
+    "password": "tarchounabir"
+   
+  },
+  {
+     "id": "2",
+    "name": "wassimhachani",
+    "email": "wassim@gmail.com",
+    "password": "wassim123"
+  },
+  {
+    "id": "3",
+    "name": "nour",
+    "email": "nour@gmail.com",
+    "password": "tarchounabir"
+  }
+
+]
+
+
+}

@@ -1,0 +1,48 @@
+<mat-toolbar>
+    <span>{{teamAdminservice.form.controls['_id'].value?"Modify Team":"New Team"}}</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="teamAdminservice.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="1" rowHeight="100px">
+      <mat-grid-tile>
+        <div class="container">
+          <input type="hidden" formControlName="id">
+          <mat-form-field >
+            <input formControlName="name" matInput placeholder="name">
+            <mat-error *ngIf="teamAdminservice.form.controls['name'].errors?.required">this field is mandatory.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="margin-Left:30px;">
+            <input formControlName="mail" matInput placeholder="Email">
+            <mat-error *ngIf="teamAdminservice.form.controls['mail'].errors?.email">Invalid email adress.</mat-error>
+            <mat-error *ngIf="teamAdminservice.form.controls['mail'].errors?.required">this field is mandatory.</mat-error>
+          </mat-form-field>
+          
+        <mat-form-field style="margin-Left:30px;"> 
+            <input formControlName="city" matInput placeholder="City">
+            <mat-error *ngIf="teamAdminservice.form.controls['city'].errors?.required">This field is mandatory.</mat-error>
+            <mat-error *ngIf="teamAdminservice.form.controls['city'].errors?.minlength">Minimum 4 charactors needed.
+            </mat-error>
+          </mat-form-field>
+          
+          <mat-form-field style="margin-Left:30px;">
+            <input formControlName="phone" matInput placeholder="Phone">
+            <mat-error>this field is mandatory.</mat-error>
+          </mat-form-field>
+     </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        
+        <div class="controles-container">
+         
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="teamAdminservice.form.invalid">Save</button>
+            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+          </div>
+        </div>
+       </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+  

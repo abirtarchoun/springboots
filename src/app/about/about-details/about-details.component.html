@@ -1,0 +1,37 @@
+<div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('assets/images/plan5.jpg')">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h1>About Us</h1>
+                    <h3 align="center" style="color:rgb(247, 247, 247)">Impression Make Customers </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<section class="breadcrumb_section text-center clearfix">
+    <div class="overlay"></div>
+    <div class="page_title_area has_overlay d-flex align-items-center clearfix">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img [src]="Agency?.image" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-lg-4 ml-auto">
+                    <h4 style="color:rgb(123, 123, 123)" class="mb-4"><span><mat-icon style="color:rgb(123, 123, 123)"> location_on</mat-icon></span>
+                         {{Agency?.location}}
+                    </h4>
+                        <span style="color:rgb(228, 142, 13)" ><b>date creation :</b> </span> {{ Agency?.date_creation }} <span class="mx-2">By</span><a  style="color:rgb(228, 142, 13)" routerLink ="">{{ Agency?.owner }}</a>
+                        <div class=" mr-auto"><br>
+                        <h4 style="color:rgb(228, 142, 13)" class="mb-4">
+                        description :</h4> <div class="container" align="center">{{Agency?.description}}</div>
+                        <hr>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
